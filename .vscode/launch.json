@@ -8,15 +8,22 @@
             "type": "java",
             "name": "Launch MyszkowskiMain",
             "request": "launch",
-            "mainClass": "main.MyszkowskiMain",
-            "projectName": "SKRIPTOHER_fbf5e2d2"
+            "mainClass": "MyszkowskiMain",
+            "projectName": "SKRIPTOHER_3e2feaab"
         },
         {
             "type": "java",
-            "name": "CodeLens (Launch) - App",
+            "name": "Launch MyszkowskiMain",
+            "request": "launch",
+            "mainClass": "main.MyszkowskiMain",
+            "projectName": "SKRIPTOHER_3e2feaab"
+        },
+        {
+            "type": "java",
+            "name": "Launch App",
             "request": "launch",
             "mainClass": "App",
-            "projectName": "SKRIPTOHER_fbf5e2d2"
+            "projectName": "SKRIPTOHER_3e2feaab"
         }
     ]
 }

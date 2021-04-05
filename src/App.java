@@ -1,9 +1,5 @@
 import java.io.IOException;
 
-import components.TextReader;
-import components.Vigenere;
-import components.Myszkowski;
-
 public class App {
     public static void main(String[] args) throws IOException{
         TextReader psn = new TextReader("message");

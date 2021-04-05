@@ -1,5 +1,3 @@
-package components;
-
 public class Myszkowski {
     public String key;
     public String keyVigenere;
@@ -16,7 +14,7 @@ public class Myszkowski {
         matrix = new int[getKey().length()];
         two = new char[getKeyVigenere().length()][getKeyVigenere().length()];
     }
-    
+
     public String getKey() {
         return key;
     }
@@ -33,44 +31,41 @@ public class Myszkowski {
         this.keyVigenere = keyVigenere;
     }
 
-    public String removeSpace(String x){
-        String result="";
+    public String removeSpace(String x) {
+        String result = "";
         for (int i = 0; i < x.length(); i++) {
             char c = x.charAt(i);
-            if(Character.isLetter(c)){
-                result +=c;
-            } else{
+            if (Character.isLetter(c)) {
+                result += c;
+            } else {
                 continue;
             }
         }
         return result;
     }
 
-    public void convertKeyToNumbers(){
+    public void convertKeyToNumbers() {
         for (int i = 0; i < getKey().length(); i++) {
             char temp = getKey().charAt(i);
-            if(!L.checkKey(temp)){
+            if (!L.checkKey(temp)) {
                 L.addChar(temp);
             }
         }
         L.sortKey();
-    } 
+    }
 
-    public void getIndexKey()
-    {
+    public void getIndexKey() {
         for (int i = 0; i < getKey().length(); i++) {
             char c = getKey().charAt(i);
             matrix[i] = L.checkIndex(c);
         }
     }
 
-
-    public void createMatrix()
-    {
-        int j=0;
+    public void createMatrix() {
+        int j = 0;
         for (int i = 0; i < getKeyVigenere().length(); i++) {
             char karakter = getKeyVigenere().charAt(i);
-            if(j < matrix.length){
+            if (j < matrix.length) {
                 two[i][matrix[j]] = karakter;
             } else {
                 j = 0;
@@ -80,22 +75,21 @@ public class Myszkowski {
         }
     }
 
-    public String rekursif(){
-        String result="";
+    public String rekursif() {
+        String result = "";
         for (int j = 1; j <= L.indexChar.size(); j++) {
-            result+=this.getMyszkowski(j);
+            result += this.getMyszkowski(j);
         }
         return result;
     }
 
-    public String getMyszkowski(int x)
-    {
-        String result="";
+    public String getMyszkowski(int x) {
+        String result = "";
         for (int i = 0; i < two.length; i++) {
-            if(Character.isLetter(two[i][x])){
-                result+=two[i][x];
+            if (Character.isLetter(two[i][x])) {
+                result += two[i][x];
             }
-        }  
+        }
         return result;
     }
 }
