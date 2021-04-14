@@ -1,7 +1,9 @@
+package components;
+
 import java.util.Collections;
 import java.util.LinkedList;
 
-public class List{
+public class List {
     LinkedList<Integer> indexSpace;
     LinkedList<Character> indexChar;
 
@@ -22,13 +24,13 @@ public class List{
         indexSpace.add(x);
     }
 
-    public void addChar(char x){
+    public void addChar(char x) {
         indexChar.add(x);
     }
 
     public boolean checkCharacter(int x) {
         for (int i = 0; i < indexSpace.size(); i++) {
-            if(indexSpace.get(i) == x){
+            if (indexSpace.get(i) == x) {
                 return true;
             }
         }
@@ -37,30 +39,30 @@ public class List{
 
     public boolean checkKey(char x) {
         for (int i = 0; i < indexChar.size(); i++) {
-            if(indexChar.get(i) == x){
+            if (indexChar.get(i) == x) {
                 return true;
             }
         }
         return false;
     }
 
-    public int checkIndex(char x){
+    public int checkIndex(char x) {
         int temp = 0;
         for (int i = 0; i < indexChar.size(); i++) {
-            if(indexChar.get(i) == x){
-                temp = i+1;
+            if (indexChar.get(i) == x) {
+                temp = i + 1;
             }
         }
         return temp;
     }
 
-    public void sortKey(){
+    public void sortKey() {
         Collections.sort(indexChar);
     }
 
-    public void print(){
-        for (int i = 0; i <  indexSpace.size(); i++) {
-            System.out.print(indexSpace.get(i) + " ");       
+    public void print() {
+        for (int i = 0; i < indexSpace.size(); i++) {
+            System.out.print(indexSpace.get(i) + " ");
         }
     }
 

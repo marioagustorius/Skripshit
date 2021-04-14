@@ -1,3 +1,5 @@
+package components;
+
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.DirectoryStream;
@@ -6,14 +8,14 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
 
-public class TextReader{
-    
+public class TextReader {
+
     public String directory;
 
     public TextReader() {
-        
+
     }
-    
+
     public TextReader(String directory) {
         this.directory = directory;
     }
@@ -26,8 +28,8 @@ public class TextReader{
         this.directory = directory;
     }
 
-    public String textReader() throws IOException{
-        String input="";
+    public String textReader() throws IOException {
+        String input = "";
         Path path = Paths.get(getDirectory());
         DirectoryStream<Path> directoryStream = null;
         if (Files.isDirectory(path)) {
@@ -44,4 +46,4 @@ public class TextReader{
         }
         return input;
     }
-} 
+}

@@ -1,3 +1,5 @@
+package components;
+
 public class Myszkowski {
     public String key;
     public String keyVigenere;

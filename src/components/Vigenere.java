@@ -1,3 +1,5 @@
+package components;
+
 public class Vigenere {
 
     List L = new List();

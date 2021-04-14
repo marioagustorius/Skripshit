@@ -1,3 +1,5 @@
+import components.Myszkowski;
+
 public class MyszkowskiMain {
     public static void main(String[] args) {
         String keyMyszkowski = "pasang";
@@ -7,7 +9,7 @@ public class MyszkowskiMain {
         m.getIndexKey();
         m.createMatrix();
         String resultMyszkowski = m.rekursif();
-        System.out.println("kunci asli : "+keyVigenere);
-        System.out.println("Hasil kunci gabungan : "+resultMyszkowski);
+        System.out.println("kunci asli : " + keyVigenere);
+        System.out.println("Hasil kunci gabungan : " + resultMyszkowski);
     }
 }
