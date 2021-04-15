@@ -2,7 +2,7 @@ package components;
 
 public class Myszkowski {
     public String key;
-    public String keyVigenere;
+    public String chiperText;
     int[] matrix;
     char[][] two;
     List L = new List();
@@ -10,11 +10,11 @@ public class Myszkowski {
     public Myszkowski() {
     }
 
-    public Myszkowski(String key, String keyVigenere) {
+    public Myszkowski(String key, String chiperText) {
         this.key = this.removeSpace(key.toLowerCase());
-        this.keyVigenere = this.removeSpace(keyVigenere.toLowerCase());
+        this.chiperText = this.removeSpace(chiperText.toLowerCase());
         matrix = new int[getKey().length()];
-        two = new char[getKeyVigenere().length()][getKeyVigenere().length()];
+        two = new char[getChiperText().length()][getChiperText().length()];
     }
 
     public String getKey() {
@@ -25,12 +25,12 @@ public class Myszkowski {
         this.key = key;
     }
 
-    public String getKeyVigenere() {
-        return keyVigenere;
+    public String getChiperText() {
+        return chiperText;
     }
 
-    public void setKeyVigenere(String keyVigenere) {
-        this.keyVigenere = keyVigenere;
+    public void setChiperText(String chiperText) {
+        this.chiperText = chiperText;
     }
 
     public String removeSpace(String x) {
@@ -65,8 +65,8 @@ public class Myszkowski {
 
     public void createMatrix() {
         int j = 0;
-        for (int i = 0; i < getKeyVigenere().length(); i++) {
-            char karakter = getKeyVigenere().charAt(i);
+        for (int i = 0; i < getChiperText().length(); i++) {
+            char karakter = getChiperText().charAt(i);
             if (j < matrix.length) {
                 two[i][matrix[j]] = karakter;
             } else {
@@ -94,4 +94,5 @@ public class Myszkowski {
         }
         return result;
     }
+
 }
