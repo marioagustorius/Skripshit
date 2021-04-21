@@ -14,7 +14,7 @@ public class Myszkowski {
         this.key = this.removeSpace(key.toLowerCase());
         this.chiperText = this.removeSpace(chiperText.toLowerCase());
         matrix = new int[getKey().length()];
-        two = new char[getChiperText().length()][getChiperText().length()];
+        two = this.checkLength();
     }
 
     public String getKey() {
@@ -31,6 +31,15 @@ public class Myszkowski {
 
     public void setChiperText(String chiperText) {
         this.chiperText = chiperText;
+    }
+
+    public char[][] checkLength() {
+        if (getChiperText().length() > getKey().length()) {
+            two = new char[getChiperText().length()][getChiperText().length()];
+        } else {
+            two = new char[getKey().length()][getKey().length()];
+        }
+        return two;
     }
 
     public String removeSpace(String x) {

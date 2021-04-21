@@ -7,7 +7,7 @@ import components.Vigenere;
 public class App {
     public static void main(String[] args) throws IOException {
         TextReader psn = new TextReader("message");
-        String keyMyszkowski = "pasang";
+        String keyMyszkowski = "pasabg";
         String keyVigenere = "keylock";
         Vigenere v = new Vigenere();
 
