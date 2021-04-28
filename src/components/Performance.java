@@ -59,4 +59,11 @@ public class Performance {
                 return 0;
         }
     }
+
+    public double avalancheEffect(int x, int changeBit){
+        String lenghtBit = String.valueOf(x);
+        int totalBit = convertStringToBit(lenghtBit);
+        double aE = (changeBit*100)/totalBit;
+        return aE;
+    }
 }

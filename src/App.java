@@ -30,7 +30,12 @@ public class App {
         System.out.print("===================================");
         System.out.println();
         Performance p = new Performance();
-        System.out.println("Jumlah bit Vigenere     : "+p.convertStringToBit(ciphertext));
-        System.out.println("Jumlah bit Myszkowski   : "+p.convertStringToBit(resultMyszkowski));
+        int bitPlainText = p.convertStringToBit(psn.textReader());
+        int bitMyszkowski = p.convertStringToBit(resultMyszkowski);
+        System.out.println("Total bit plain text   : "+bitPlainText);
+        System.out.println("Total bit Myszkowski   : "+bitMyszkowski);
+        System.out.println("Length Plain Text :" +ciphertext.length());
+        double avalancheEffect = p.avalancheEffect(resultMyszkowski.length(), (bitPlainText-bitMyszkowski));
+        System.out.println("Avalanche Effect : "+avalancheEffect+" %");
     }
 }
