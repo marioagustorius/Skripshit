@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch PerformanceMain",
+            "request": "launch",
+            "mainClass": "PerformanceMain",
+            "projectName": "Skripshit_80c6680f"
+        },
+        {
+            "type": "java",
+            "name": "Launch MyszkowskiMain",
+            "request": "launch",
+            "mainClass": "MyszkowskiMain",
+            "projectName": "Skripshit_80c6680f"
+        },
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "Skripshit_80c6680f"
+        },
+        {
+            "type": "java",
             "name": "Launch App",
             "request": "launch",
             "mainClass": "App",
