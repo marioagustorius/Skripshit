@@ -30,12 +30,17 @@ public class App {
         System.out.print("===================================");
         System.out.println();
         Performance p = new Performance();
-        int bitPlainText = p.convertStringToBit(psn.textReader());
-        int bitMyszkowski = p.convertStringToBit(resultMyszkowski);
-        System.out.println("Total bit plain text   : "+bitPlainText);
-        System.out.println("Total bit Myszkowski   : "+bitMyszkowski);
-        System.out.println("Length Plain Text :" +ciphertext.length());
-        double avalancheEffect = p.avalancheEffect(resultMyszkowski.length(), (bitPlainText-bitMyszkowski));
-        System.out.println("Avalanche Effect : "+avalancheEffect+" %");
+        String plainNoSpace = m.removeHelper(psn.textReader());
+        String binaryPlain = p.convertStringToBinary(plainNoSpace);
+        String binaryMyszkowski = p.convertStringToBinary(resultMyszkowski);
+
+        System.out.println("Binary Plain Text   : " + p.printBinary(binaryPlain, 8, " "));
+        System.out.println("Binary Myszkowski   : " + p.printBinary(binaryMyszkowski, 8, " "));
+        String xor = p.xOR(binaryPlain, binaryMyszkowski);
+        System.out.println("Operasi XOR         : " + p.printBinary(xor, 8, " "));
+        System.out.println("Jumlah bit berubah  : " + p.getChangeBit());
+        p.setTotalBit(m.removeHelper(psn.textReader()).length());
+        System.out.println("Total bit           : " + p.getTotalBit());
+        System.out.println("Avalanche Effect : " + p.avalancheEffect() + " %");
     }
 }

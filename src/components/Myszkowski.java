@@ -55,6 +55,19 @@ public class Myszkowski {
         return result;
     }
 
+    public String removeHelper(String x) {
+        String result = "";
+        for (int i = 0; i < x.length(); i++) {
+            char c = x.charAt(i);
+            if (Character.isLetter(c)) {
+                result += c;
+            } else {
+                continue;
+            }
+        }
+        return result.toLowerCase();
+    }
+
     public void convertKeyToNumbers() {
         for (int i = 0; i < getKey().length(); i++) {
             char temp = getKey().charAt(i);

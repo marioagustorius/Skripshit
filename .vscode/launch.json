@@ -9,6 +9,13 @@
             "name": "Launch PerformanceMain",
             "request": "launch",
             "mainClass": "PerformanceMain",
+            "projectName": "Skripshit_3e71bf3e"
+        },
+        {
+            "type": "java",
+            "name": "Launch PerformanceMain",
+            "request": "launch",
+            "mainClass": "PerformanceMain",
             "projectName": "Skripshit_80c6680f"
         },
         {
