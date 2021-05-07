@@ -30,7 +30,6 @@ public class App {
         System.out.print("===================================");
         System.out.println();
         Performance p = new Performance();
-        String plainNoSpace = m.removeHelper(psn.textReader());
         String binaryPlain = p.convertStringToBinary(plainNoSpace);
         String binaryMyszkowski = p.convertStringToBinary(resultMyszkowski);
 
@@ -41,6 +40,6 @@ public class App {
         System.out.println("Jumlah bit berubah  : " + p.getChangeBit());
         p.setTotalBit(m.removeHelper(psn.textReader()).length());
         System.out.println("Total bit           : " + p.getTotalBit());
-        System.out.println("Avalanche Effect : " + p.avalancheEffect() + " %");
+        System.out.println("Avalanche Effect    : " + p.avalancheEffect() + " %");
     }
 }
