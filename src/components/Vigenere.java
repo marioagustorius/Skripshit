@@ -19,9 +19,7 @@ public class Vigenere {
     public String encrypt(final String message, final String key) {
         String result = "";
         int decrement = 1;
-
         for (int i = 0, j = 0; i < message.length(); i++) {
-
             char c = message.charAt(i);
             if (Character.isLetter(c)) {
                 if (Character.isUpperCase(c)) {

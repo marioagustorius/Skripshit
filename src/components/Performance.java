@@ -6,26 +6,26 @@ import java.util.stream.Collectors;
 
 public class Performance {
     ArrayList<String> xor;
-    public int changeBit;
-    public int totalBit;
+    public double changeBit;
+    public double totalBit;
 
     public Performance() {
         xor = new ArrayList<String>();
     }
 
-    public int getChangeBit() {
+    public double getChangeBit() {
         return changeBit;
     }
 
-    public void setChangeBit(int changeBit) {
+    public void setChangeBit(double changeBit) {
         this.changeBit = changeBit;
     }
 
-    public int getTotalBit() {
+    public double getTotalBit() {
         return totalBit;
     }
 
-    public void setTotalBit(int totalBit) {
+    public void setTotalBit(double totalBit) {
         this.totalBit = totalBit * 8;
     }
 
