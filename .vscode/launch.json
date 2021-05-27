@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch VigenereMain",
+            "request": "launch",
+            "mainClass": "VigenereMain",
+            "projectName": "Skripshit_80c6680f"
+        },
+        {
+            "type": "java",
+            "name": "Launch VigenereMyszkowskiMain",
+            "request": "launch",
+            "mainClass": "VigenereMyszkowskiMain",
+            "projectName": "Skripshit_80c6680f"
+        },
+        {
+            "type": "java",
             "name": "Launch PerformanceMain",
             "request": "launch",
             "mainClass": "PerformanceMain",

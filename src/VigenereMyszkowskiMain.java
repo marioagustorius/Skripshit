@@ -5,11 +5,11 @@ import components.Performance;
 import components.TextReader;
 import components.Vigenere;
 
-public class App {
+public class VigenereMyszkowskiMain {
     public static void main(String[] args) throws IOException {
         TextReader psn = new TextReader("message");
         String keyMyszkowski = "swindon";
-        String keyVigenere = "marvnomercy";
+        String keyVigenere = "sorvnomercy";
         Vigenere v = new Vigenere();
 
         System.out.println("message        : " + psn.textReader());
@@ -48,8 +48,9 @@ public class App {
         p.setTotalBit(plainNoSpace.length());
         System.out.println("Total bit           : " + p.getTotalBit());
         System.out.println("Avalanche Effect    : " + p.avalancheEffect() + " %");
+
         System.out.println("thout time vige "+ totalTimeVige + " m/s");
         System.out.println("thout time myz "+ totalTimeMyz + " m/s");
-        System.out.println("thout time gabungan "+ (totalTimeVige + totalTimeMyz) + " m/s");
+        System.out.println("thout time gabungan "+ ( totalTimeVige + totalTimeMyz ) + " m/s");
     }
 }
